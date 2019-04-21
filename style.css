@@ -1,0 +1,92 @@
+body {
+    background-color: orange;
+}
+
+nav{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+nav span{
+    position: relative;
+    display: block;
+    background-color: black;
+    width: 40px;
+    height: 3px;
+    transition: .5s ease-in-out;
+}
+
+nav span::before, nav span::after{
+    background-color: black;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .5s ease-in-out;
+}
+
+nav span::before{
+    top: -10px;
+}
+
+nav span::after{
+    bottom: -10px;
+}
+
+input{
+    display: none;
+}
+
+input:checked ~ ul{
+    opacity: 1;
+}
+
+input:checked ~ label .hamburguer{
+    box-shadow: 0 0 0 130vw white;
+    transition: 2s;
+}
+
+input:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer::before{
+    transform: rotate(90deg);
+    top: 0;
+}
+
+input:checked ~ label .hamburguer::after{
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+div{
+    width: 800px;
+}
+
+ul{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    list-style: none;
+    transition: .25s 1s ease-in-out;
+}
+
+
+a{
+    display: block;
+    margin-bottom: 40px;
+    color:orange;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
